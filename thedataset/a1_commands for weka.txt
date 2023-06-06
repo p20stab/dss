@@ -1,0 +1,18 @@
+NumericToNominal 1-5,8,9
+SpreadSubsample 1.2 1
+CostSensitiveClassifier - RandomForest - (0,1.0)(1.2,0)
+
+------------------------------------
+NumericToNominal 9
+SpreadSubsample 1.0 20
+Cross-validation 20
+j48
+
+++++++++++++++
+rules: 99 skin         ?,?,?,?       
+++++++++++++++
+
+
+./weka-3-8-6/weka.sh
+
+java weka.classifiers.meta.CostSensitiveClassifier -T <file>.arff -l bestfinal.model -p 0
